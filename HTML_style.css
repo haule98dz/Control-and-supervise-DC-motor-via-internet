@@ -1,0 +1,125 @@
+  body {
+    position:relative;
+    top: 0px;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  div.html_elements {
+    position: absolute;
+    top: 0px;
+    padding: 0px;
+    margin: 0px;
+    z-index: 2;
+  }
+
+  canvas {
+    position: absolute;
+    top: 0px;
+    padding: 0px;
+    margin: 0px;
+    z-index: 1;
+  }
+
+  #buttonFullscreen {
+    position:absolute;
+    cursor:pointer; 
+    background-color:#004747;
+    color:white;
+  }
+
+  #buttonPassword {
+    position:absolute;
+    cursor:pointer; 
+    background-color:#004747;
+    color:white;
+  }
+
+  #submit-setpoint {
+    background-color: #000f29;
+    color:white;
+    cursor:pointer;
+    height: 30px;
+  }
+
+  #submit-setpoint2 {
+    background-color: #000f29;
+    color:white;
+    cursor:pointer;
+    height: 30px;
+  }
+
+  #submit-control-parameters {
+    position: absolute;
+    cursor:pointer;
+    background-color:#000f29;
+    color:white;
+  }
+
+  #charts-title {
+    position: absolute;
+    cursor:pointer;
+    background-color: rgb(210, 220, 220);
+    align-self: center;
+  }
+
+  #labelsetpoint {
+    position: absolute;
+  }
+
+  #setpoint {
+    position: relative;
+  }
+
+  .grid-container {
+    position: absolute;
+    display: grid;
+    grid-gap: 0px;
+    background-color: rgb(71, 71, 71);
+    padding: 0px;
+    z-index: -1;
+  }
+  
+  .grid-item {
+    position: relative;
+    background-color: rgb(36, 36, 36);
+    color:white; 
+    text-align: left;
+    padding: 0px;
+    border: 1px solid black;
+  }
+  
+  .item1 {
+    position:relative;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .item2 {
+    position:relative;
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  input {
+    background-color: black;
+    color: white;
+  }
+
+  #control-panel2 {
+    position: relative;
+  }
+
+ div.radioButtons {
+    position: absolute;
+    top: 30px;
+    left:360px;
+    font-size: 20px;
+  }
+
+  #title {
+    font-size: 20px;
+    color: blanchedalmond;
+    margin-top: 2px;
+    font-weight: bold;
+  }

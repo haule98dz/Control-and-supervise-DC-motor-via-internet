@@ -1,0 +1,82 @@
+<html>
+
+<head>
+  <meta id="viewport" content="height=device-height, initial-scale=1.0">
+
+    <script src="https://nckh-humg.herokuapp.com/socket.io/socket.io.js"></script>
+ <!--
+  <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+   -->
+  <script>
+    let socket = io("https://nckh-humg.herokuapp.com");
+    //let socket = io("http://localhost:3000");
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="HTML_style.css">
+
+</head>
+
+<body>
+  <div class="html_elements">
+    <p id = "title">&nbsp GIAO DIỆN GIÁM SÁT & ĐIỀU KHIỂN TRÊN NỀN TẢNG WEB - nhóm nckh HUMG</p>
+    <button onclick="clickFullscreen()" id="buttonFullscreen">Xem toàn màn hình</button>
+    <button onclick="clickPassword()" id="buttonPassword">Yêu cầu quyền điều khiển</button>
+    <select id="charts-title" onchange="selectChanged()">
+      <option value="speed">Tốc độ động cơ và dòng điện qua động cơ</option>
+      <option value="temperature">Nhiệt độ theo thời gian</option>
+    </select>
+
+    <div class="grid-container">
+      <div class="grid-item item1">
+        <div id="control-panel">
+          <p style="text-align: center; font-size: 15px; font-weight: bolder; color:chocolate">Điều khiển tốc độ động cơ
+          </p>
+          <label for="setpoint">Setpoint:</label>
+          <input id="setpoint" type="number" step="1" min="0" disabled></input>
+          <button id="submit-setpoint" onclick="sendSpdSP()" disabled>OK</button><br><br>
+          <div class="radioButtons">
+            <form>
+              <input type="radio" id="cw" name="dir" onclick = radioChange() disabled>
+              <label for="cw" style="top: 10px">Quay thuận</label><br>
+              <input type="radio" id="ccw" name="dir" onclick = radioChange() disabled>
+              <label for="ccw">Quay nghịch</label>
+            </form>
+          </div>
+          <!--
+          <label>Tham số điều khiển</label><br>
+          <label>Kp:</label><input type="number" id='kp' step="0.01" min="0"></input><br>
+          <label>Ki:</label><input type="number" id='ki' step="0.01" min="0" style='margin-left:4.5px'></input><br>
+          <label>Kd:</label><input type="number" id='kd' step="0.01" min="0"></input>
+          -->
+        </div>
+        <!--<button id="submit-control-parameters" onclick="">OK</button><br>-->
+      </div>
+      <div class="grid-item item2">
+        <div id="control-panel2">
+          <p style="text-align: center; font-size: 15px; font-weight: bolder; color:chocolate">Điều khiển hệ thống làm
+            lạnh</p>
+          <label for="setpoint2">Setpoint:</label>
+          <input id="setpoint2" type="number" step="1" min="0" disabled></input>
+          <button id="submit-setpoint2" onclick="sendTempSP()" disabled>OK</button></br>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="functions.js"></script>
+
+  <canvas id="gc" width="1366" height="1000"></canvas>
+  <script src="graphics/functions.js"></script>
+  <script src="graphics/speedMeter.js"></script>
+  <script src="graphics/ammeter.js"></script>
+  <script src="graphics/thermometer.js"></script>
+  <script src="graphics/button.js"></script>
+  <script src="graphics/chart.js"></script>
+  <script src="graphics/clock.js"></script>
+  <script src="graphics/main.js"></script>
+  <script src="HTML_style.js"></script>
+  <script src="socket.js"></script>
+
+</body>
+
+</html>
